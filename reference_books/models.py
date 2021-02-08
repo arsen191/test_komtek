@@ -2,7 +2,6 @@ from datetime import date
 
 from django.db import models
 from django.db.models import UniqueConstraint
-from django.utils import timezone
 
 
 class ReferenceBook(models.Model):
