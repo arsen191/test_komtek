@@ -22,7 +22,7 @@ class ReferenceBookByDateListView(ReadOnlyModelViewSet):
     serializer_class = ReferenceBookSerializer
 
     def get_queryset(self):
-        print(self.kwargs)
+        # предполагаем, что актуальными являются справочники, выпущенные до указанной даты
         queryset = ReferenceBook.objects.filter(Q(begin_at__lte=self.kwargs['date']))
         return queryset
 
